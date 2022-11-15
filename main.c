@@ -3,11 +3,23 @@
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
 
-void main(void){
-	int i = 300; 
+void swap(int *a,int *b){
+	int temp;
 	
-	int *pi = &i;
-	char *pc = &i;
+	temp = *a;
+	*a = *b;
+	*b = temp;
 	
-	printf("%i, %i, %i\n", i, *pi, *pc); 
 }
+
+void main(void){
+	int a = 3;
+	int b = 5;
+	swap(&a, &b);
+	printf("a;%i, b:%i\n", a, b);
+}
+	
+	
+	
+	
+
